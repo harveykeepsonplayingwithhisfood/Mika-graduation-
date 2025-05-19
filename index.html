@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Graduation Gift</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Fredoka One', cursive;
+      background-color: black;
+      color: pink;
+      text-shadow: 2px 2px 4px black;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      position: relative;
+      transition: background-image 1s ease-in-out;
+    }
+
+    .starfield {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: auto;
+      background: rgba(0, 0, 0, 0.5);
+      border: 3px solid pink;
+      border-radius: 20px;
+      padding: 2rem;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: pink;
+      text-shadow: 1.5px 1.5px 3px black;
+      animation: flipIn 0.7s ease;
+    }
+
+    @keyframes flipIn {
+      from {
+        transform: rotateY(90deg);
+        opacity: 0;
+      }
+      to {
+        transform: rotateY(0);
+        opacity: 1;
+      }
+    }
+
+    .text-content {
+      font-size: 1.2rem;
+      line-height: 1.5;
+      white-space: pre-wrap;
+      user-select: none;
+      flex-grow: 1;
+      overflow-y: auto;
+    }
+
+    .next-btn {
+      align-self: center;
+      background-color: pink;
+      border: 3px solid pink;
+      border-radius: 30px;
+      color: black;
+      cursor: pointer;
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.1rem;
+      padding: 0.7rem 2.2rem;
+      margin-top: 2rem;
+      box-shadow: 0 0 7px pink;
+      transition: all 0.3s ease;
+      user-select: none;
+      min-width: 280px;
+      text-align: center;
+      text-shadow: none;
+      flex-shrink: 0;
+    }
+
+    .next-btn:hover {
+      background-color: black;
+      color: pink;
+      transform: scale(1.1);
+      box-shadow: 0 0 15px pink;
+    }
+
+    .decor {
+      position: absolute;
+      width: 80px;
+      z-index: 0;
+      opacity: 0.6;
+    }
+
+    .decor1 { top: 5%; left: 5%; }
+    .decor2 { bottom: 10%; right: 10%; }
+    .decor3 { top: 15%; right: 5%; }
+    .decor4 { bottom: 15%; left: 10%; }
+    .decor5 { top: 50%; left: 80%; }
+    .decor6 { bottom: 5%; right: 30%; }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 1.4rem 1.6rem;
+      }
+      .text-content {
+        font-size: 1rem;
+      }
+      .next-btn {
+        min-width: 200px;
+        font-size: 1rem;
+        padding: 0.6rem 1.8rem;
+      }
+      .decor {
+        width: 50px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .container {
+        margin: 1.5vh 5vw;       /* vertical and horizontal margin */
+        max-width: 90vw;         /* almost full width with margins */
+        height: 88vh;            /* nearly full height */
+        padding: 2rem;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+      }
+      .text-content {
+        font-size: 1.15rem;
+      }
+      .next-btn {
+        min-width: 280px;
+        font-size: 1.2rem;
+        padding: 0.8rem 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Decorations -->
+  <img src="https://www.dropbox.com/scl/fi/xn4ju1j015cay52rnf6og/Decoration-1.png?rlkey=nmchnnk881th3rv6xgb0g60kb&st=w1qmxbp9&dl=1" class="decor decor1" alt="decor1" />
+  <img src="https://www.dropbox.com/scl/fi/dqab0n0byi53sno3hqi7h/decoration-2.png?rlkey=8s1vn3sahwh74b3ank5ej7v2t&st=qt0d1p5i&dl=1" class="decor decor2" alt="decor2" />
+  <img src="https://www.dropbox.com/scl/fi/ykn4ud0yc76vlswrg31z5/decoration-3.png?rlkey=8lfo8qz1nyin1gwi6221rytu9&st=uv0g3wz8&dl=1" class="decor decor3" alt="decor3" />
+  <img src="https://www.dropbox.com/scl/fi/mnjehqxidxfx59x6ixi4l/decoration-4.png?rlkey=jaemct4huzotc04dxvdqbdr64&st=i0x533af&dl=1" class="decor decor4" alt="decor4" />
+  <img src="https://www.dropbox.com/scl/fi/ykn4ud0yc76vlswrg31z5/decoration-3.png?rlkey=8lfo8qz1nyin1gwi6221rytu9&st=uv0g3wz8&dl=1" class="decor decor5" alt="decor5" />
+  <img src="https://www.dropbox.com/scl/fi/dqab0n0byi53sno3hqi7h/decoration-2.png?rlkey=8s1vn3sahwh74b3ank5ej7v2t&st=qt0d1p5i&dl=1" class="decor decor6" alt="decor6" />
+
+  <!-- Starfield -->
+  <canvas class="starfield" id="starCanvas"></canvas>
+
+  <!-- Main Content -->
+  <div class="container" id="pageContainer">
+    <div class="text-content" id="pageText"></div>
+    <button class="next-btn" id="nextBtn"></button>
+  </div>
+
+  <!-- Music -->
+  <audio id="bgMusic" preload="auto">
+    <source src="https://www.dropbox.com/scl/fi/f7ptcjsf0em140g36gq0l/Laufey-Magnolia-Official-Audio.mp3?rlkey=rtkgyahh7h2yjljuug3vwqc17&st=95z5pyhn&dl=1" type="audio/mpeg" />
+  </audio>
+
+  <script>
+    const pages = [
+      {
+        text: "CONGRATS ON GRADUATION MIKAAA IM SO PROUD OF YOU i made you this as a present heh",
+        background: "https://www.dropbox.com/scl/fi/wk489a5ovcvdw1k9w871l/background.webp?rlkey=ztcw3kxzzncz7oex6fni3h73t&st=to4ubsgs&dl=1",
+        button: "Click this dumdum"
+      },
+      {
+        text: `I AM SO PROUD OF YOU. What you have done with school is not possible for anyone other than you, It blows me mind to see how much you have achieved you worked so hard for this mika this wasn't a "academic comeback" what you did is so much more you came back to school after not going much and you did all the work you had to do you caught up and you thrived no matter your physical health your mental health you went back and you did it all it would be been so hard but you did it and i always knew you could ever since i met you i believed in you because you are the most amazing and smart person i have ever met in my life you've done so well my dear mika and you deserve everything good that has come of this im so proud of you it makes me want to cry(i did cry) #crybabysam you didn't even just graduate you graduated WITH GOOD GRADES??? and i cant even bring words to how amazing that is, How amazing you are`,
+        background: "https://www.dropbox.com/scl/fi/3fikdwlzhe4oucrru5vek/Page-one.webp?rlkey=fyu3gri1jrmetm3kz7c92jx4a&st=in2guezj&dl=1",
+        button: "Graduating highschool and going to university"
+      },
+      {
+        text: `You have had no parental help your entire life you've always had to be independant and yet here you are, A highschool graduate who got accepted into university and is moving in with there best friend and is in a commited relationship with someone they love dearly, Im so happy to see everything going well for you you deserve everything in my eyes and Im happy to be here to witness you blossom like the flower you are you mean the world to me, You mean fourth dimensional space time to me and i love you mika`,
+        background: "https://www.dropbox.com/scl/fi/yds8xj6fbm8qfteij1o5b/Page-two.webp?rlkey=yccnmdubxqoznpn87wakmiipv&st=7pgns5qp&dl=1",
+        button: "I have and always will believe in you"
+      },
+      {
+        text: `Ever since we became friends and i got to know you I knew straight away how much of a smarter and kind hearted person you are, With any problems you always faced I knew you could always get through them I knew that you could do it because your mika and mika is quite poggers You are the smartest and strongest person I have ever met and With anything that is to come I know everything will be okay no matter what happens you can get through it and i will always be here for as shoulder to cry on, someone to talk to, Someone to fall back on when you need help`,
+        background: "https://www.dropbox.com/scl/fi/65pylhtsy38fpoz5pynlt/Page-three.webp?rlkey=xazaa1yt5bmbdvl3wao20d537&st=7iitetnt&dl=1",
+        button: "You mean sm to me"
+      },
+      {
+        text: `Throughout any stage of our relationship I have always had a soft spot for you, your the only exception and I will always have a soft spot for you because your you and no one would ever be you your so special your one of a kind and im so happy and blessed to have you in my life, And our son toriko(50/50 custody)
+`,
+        background: "https://www.dropbox.com/scl/fi/5qkia5o9o2tme7ddptwcd/prompt-four.webp?rlkey=mtmbtxxdxqcb8409jk8d0j9o6&st=5xs7i7xe&dl=1",
+        button: "Corny poem"
+      },
+      {
+        text: `In a isolated and cold universe you are the stars in the sky giving light and warmth to each planet orbiting near you
+though darkness surrounds this universe you are the stars thats shine brighter then anything else
+you are the warmth and the light, a guiding sky in my life`,
+        background: "https://www.dropbox.com/scl/fi/wk489a5ovcvdw1k9w871l/background.webp?rlkey=ztcw3kxzzncz7oex6fni3h73t&st=pvq7wthv&dl=1",
+        button: "Restart:3"
+      }
+    ];
+
+    const container = document.getElementById('pageContainer');
+    const textContent = document.getElementById('pageText');
+    const nextBtn = document.getElementById('nextBtn');
+    const bgMusic = document.getElementById('bgMusic');
+    const starCanvas = document.getElementById('starCanvas');
+    const ctx = starCanvas.getContext('2d');
+
+    let currentPage = 0;
+
+    // Preload backgrounds
+    pages.forEach(page => {
+      const img = new Image();
+      img.src = page.background;
+    });
+
+    function setPage(index) {
+      const page = pages[index];
+      container.style.backgroundImage = `url('${page.background}')`;
+      textContent.textContent = page.text;
+      nextBtn.textContent = page.button;
+    }
+
+    function nextPage() {
+      currentPage++;
+      if (currentPage >= pages.length) currentPage = 0;
+      // flip animation
+      container.style.animation = 'none';
+      void container.offsetWidth;  // trigger reflow
+      container.style.animation = 'flipIn 0.7s ease';
+      setPage(currentPage);
+    }
+
+    nextBtn.addEventListener('click', () => {
+      nextPage();
+    });
+
+    // Start with first page
+    setPage(currentPage);
+
+    // Play music with user interaction (required by some browsers)
+    document.body.addEventListener('click', () => {
+      if (bgMusic.paused) {
+        bgMusic.play();
+      }
+    }, {once: true});
+
+    // Starfield animation
+    let stars = [];
+    function resizeCanvas() {
+      starCanvas.width = window.innerWidth;
+      starCanvas.height = window.innerHeight;
+    }
+
+    function createStars(count) {
+      stars = [];
+      for (let i = 0; i < count; i++) {
+        stars.push({
+          x: Math.random() * starCanvas.width,
+          y: Math.random() * starCanvas.height,
+          radius: Math.random() * 1.2 + 0.3,
+          alpha: Math.random(),
+          dAlpha: 0.005 + Math.random() * 0.01
+        });
+      }
+    }
+
+    function animateStars() {
+      ctx.clearRect(0, 0, starCanvas.width, starCanvas.height);
+      for (let star of stars) {
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255, 192, 203, ${star.alpha})`;
+        ctx.fill();
+
+        star.alpha += star.dAlpha;
+        if (star.alpha <= 0 || star.alpha >= 1) star.dAlpha = -star.dAlpha;
+      }
+      requestAnimationFrame(animateStars);
+    }
+
+    function init() {
+      resizeCanvas();
+      createStars(150);
+      animateStars();
+    }
+
+    window.addEventListener('resize', () => {
+      resizeCanvas();
+      createStars(150);
+    });
+
+    init();
+  </script>
+</body>
+</html>
